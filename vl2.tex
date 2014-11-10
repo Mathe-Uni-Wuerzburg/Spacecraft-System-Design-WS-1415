@@ -64,7 +64,27 @@
  \[ \lambda_G = \lambda_{G0} - 0.25068448° /\text{min} \cdot t \text{~~~~~(Greenwich position versus $\gamma$)}\]
  Draw the line from the satellite to earth center, the intersection with surface is specified by $\theta$ and $\lambda$ (\indexx{subsatellite point}).
  
- \textbf{\indexx{Perturbations}}:
+ \textbf{\indexx{Perturbations}}:\\
+ \textbf{gravitational potential of earth}\\
+ \[ u(r,\phi,\Lambda) \]
+ $u$ gravitational at distance $r$ and latitude $\phi$ and longitude $\Lambda$ of the position.
+ 
+ \[ u(r,\phi,\Lambda) = \frac{\mu}{r} \bigg( 1+ \sum_{n=2}^{\infty}\left[ \left(\frac{R_E}{r}\right)^n \cdot J_2 \cdot P_{n0} \cos\phi + \sum_{m=1}^{n} \left(\frac{R_e}{r}\right)^n \cdot \left( C_{nm} \cos(m\Lambda) + S_{nm} \sin (m\Lambda)\right)\cdot P_{nm} (\cos \phi) \right] \bigg) \]
+ \indexx{spherical harmonic expansion} with:\\
+ $r$ distance from the earth center\\
+ $P_{nm}$ Legendre polynomials\\
+ $R_E$ radius of earth $6378 km$\\
+ $J_n$, $C_{nm}$, $S_{nm}$ constants of body reflecting the mass distribution:\\
+ $J_n$ zonal harmonic coefficient (mass distribution independent from longitude)\\
+ $C_{nm}$, $S_{nm}$ earth's tesseral harminic coefficients (for $n \neq m$) or earth's sectoral harmonic coefficients (for $n = m$)
+ 
+ By far, the largest coefficient is $J_n$ (related to equatorial bulge) by $3$ orders of magnitude.\\
+ Example: Molniya orbits of $63,4°$ have minimum change in position of perigee and apogee.
+ 
+ \textbf{Additional gravitational fields:}\\
+ by other bodies in the solar system
+ 
+ 
  
  
 \end{chapter} 
