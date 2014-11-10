@@ -1,8 +1,70 @@
-\begin{section}{13.10.2014}
+\begin{chapter}{13.10.2014}
  \[ m \cdot \ddot{\vec{r}} = F = - G \cdot \frac{m_1m_2}{r^2} \]
- $G$ ist die \index{universal gravity constant} universal gravity constant: $6.674 \cdot 10^{-11} \frac{Nm^2}{kg^2}$
+ $G$ ist die \indexx{universal gravity constant}: $6.674 \cdot 10^{-11} \frac{Nm^2}{kg^2}$
  
  \[ \ddot{\vec{r}} = \frac{\mu}{\|r\|^2} \]
- $\mu$ ist die gravity constant of the specific gravity attractor.\\
- $\mu_E$ ist die \index{gravity constant of earth} gravity constant of earth: $398600 \frac{km^3}{s^2}$
-\end{section}
+ $\mu$ is the gravity constant of the specific gravity attractor.\\
+ $\mu_E$ ist die \indexx{gravity constant of earth}: $398600 \frac{km^3}{s^2}$, außerdem gilt: $\mu_E = G\cdot m_E$\\
+ $m_E$ ist die \indexx{mass of earth}: $5.97219 \cdot 10^{24} kg$\\
+ Die Lösungen dieser Gleichung sind Kegelschnitte.
+ 
+ \[ r = \frac{p}{1+\varepsilon\cdot\cos\varphi} \]
+ $r$ ist radius towards focal point\\
+ $\varepsilon$ eccentricity of the orbit
+ $p$ parameters (spartial extensions of orbit)\\
+ $\varphi$ true anomaly
+ 
+ \textbf{Interrelationships between parameters:}\\
+ $r_a$ apocenter, $r_p$ pericenter\\
+ \[ a = \frac{p}{1-\varepsilon^2} \Rightarrow p = a(1-\varepsilon^2)= r_p(1+\varepsilon) = r_a(1-\varepsilon)\]
+ \[ a = \frac{r_a+r_p}{2}\text{, } r_a = a(1+\varepsilon)\text{, }r_p=a(1-\varepsilon)\]
+ \[ \varepsilon = \frac{r_a-r_p}{r_a+r_p} \]
+ 
+ For the specific case of circular orbits:
+ \begin{itemize}
+  \item gravitational acceleration in distance $a$ to gravitational center: $\frac{\mu}{a^2}$
+  \item centrifugal acceleration: $\omega^2\cdot r$ with $\omega = \frac{2\pi}{T}$ angular velocity and $T$ the orbital period
+  \[ \left(\frac{2\pi}{T}\right)^2\cdot a \Rightarrow \frac{\mu}{a^2} = \left(\frac{2\pi}{T}\right)^2\cdot a \Rightarrow T = 2\pi\sqrt{\frac{a^3}{\mu}}\]
+  which also holds for general ellipses
+  \[v_\text{circle} = \frac{2\pi a}{T} = \sqrt{\frac{a^3}{\mu}} \]
+ \end{itemize}
+
+ \indexx{Potential energy}: $E_\text{pot} = \frac{-\mu m}{r} +C$\\
+ \indexx{Kinetic energy}: $E_\text{kin} = \frac{m v^2}{2}$
+ \[ E = E_\text{kin} + E_\text{pot} = \frac{mv^2}{2} - \frac{\mu m}{r} \stackrel{\substack{\varepsilon \rightarrow 1\text{, }\\v_a \rightarrow 0\text{, }\\r_a \rightarrow 2a}}{=} -\frac{\mu m}{2a} \text{(constant)}\]
+ $v_a$ velocity at apocenter
+ 
+ \indexx{Binet's equation}, \indexx{Vis-Viva equation}:
+ \[ v = \sqrt{\mu \left( \frac{2}{r} - \frac{1}{a} \right)} \]
+
+ \textbf{For circles:} $r=a$, $v=\sqrt{\frac{\mu}{a}}$\\
+ $v$ \indexx{first cosmic velocity}: needed to bring a satellite on closed orbit(without perturbing forces, just gravity considered). In case of earth: $r = 6378km$, $\mu_E = 398600 \frac{km^3}{s^2}$\\
+ $\Rightarrow 7.905 \frac{km}{s}$ required as minimum velocity from the rocket launch to insert into an earth orbit.
+ 
+ A rocket launch in equatorial direction and in rotation direction of earth, we recieve a velocity component $0.463 \frac{km}{s}$ for free earth rotation rate.
+ 
+ \textbf{For parabola:} $a\rightarrow \infty$, $v = \sqrt{\frac{2\mu}{r}}$
+ $v$ \indexx{second cosmic velocity (escape velocity)}: is the minimum velocity applied to leave the gravitational field of the home planet. For earth: $11.179 \frac{km}{s}$
+
+ Derive position of the satellite in the orbit plane, e.g. we want the true anomaly $\varphi$ as the function of time $\varphi = f(t)$. There is no explicit solution but only an algorithm using the support variable eccentric anomaly $E$ can be derived.
+ 
+ \textbf{\indexx{Keplers equation}}:
+ \[ E - \varepsilon\cdot\sin(E) = \frac{2\pi}{T}(t-t_\text{perigee}) =M(t) \]
+ $M(t)$ average anomaly at time $t$, can be solved by numerical methods. From $E$, you can calculate $r$ and $\varphi$ as follows:\\
+ \[r\sin\varphi = a\sin E \cdot \sqrt{1-\varepsilon^2}\]
+ \[r\cos\varphi = a(\cos E - \varepsilon)\]
+ \[\Rightarrow \tan \frac{\varphi}{2} = \sqrt{\frac{1+\varepsilon}{1-\varepsilon}}\cdot \tan\frac{E}{2}\]
+ \[r=a(1-\varepsilon\cos E)\]
+ 
+ \textbf{Satellite Ground Tracks:}\\
+ Analyse the triangle KFB in spherical coordinates.\\
+ $\theta$ \indexx{latitude}: $\sin \theta = \sin i \sin (\omega + \varphi)$\\
+ $\lambda$ \indexx{longitude}: $\cos \lambda_1 = \frac{\cos(\omega + \varphi)}{\cos \theta}$
+ \[ \lambda = \lambda_1 + \Omega + \lambda_G \]
+ \[ \lambda_G = \lambda_{G0} - 0.25068448° /\text{min} \cdot t \text{~~~~~(Greenwich position versus $\gamma$)}\]
+ Draw the line from the satellite to earth center, the intersection with surface is specified by $\theta$ and $\lambda$ (\indexx{subsatellite point}).
+ 
+ \textbf{\indexx{Perturbations}}:
+ 
+ 
+\end{chapter} 
