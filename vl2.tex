@@ -3,16 +3,24 @@
  $G$ ist die \indexx{universal gravity constant}: $6.674 \cdot 10^{-11} \frac{Nm^2}{kg^2}$
  
  \[ \ddot{\vec{r}} = \frac{\mu}{\|r\|^2} \]
- $\mu$ is the gravity constant of the specific gravity attractor.\\
- $\mu_E$ ist die \indexx{gravity constant of earth}: $398600 \frac{km^3}{s^2}$, außerdem gilt: $\mu_E = G\cdot m_E$\\
- $m_E$ ist die \indexx{mass of earth}: $5.97219 \cdot 10^{24} kg$\\
+ \begin{tabular}{c|l|c}
+ $\mu$ & gravity constant of the specific gravity attractor.&\\
+ $\mu_E$ & \indexx{gravity constant of earth}: & $398600 \frac{km^3}{s^2}$\\
+ $m_E$ & \indexx{mass of earth}: &$5.97219 \cdot 10^{24} kg$\\
+ \end{tabular}
+ 
  Die Lösungen dieser Gleichung sind Kegelschnitte.
+ Außerdem gilt: $\mu_E = G\cdot m_E$\\
+
  
  \[ r = \frac{p}{1+\varepsilon\cdot\cos\varphi} \]
- $r$ ist radius towards focal point\\
- $\varepsilon$ eccentricity of the orbit
- $p$ parameters (spartial extensions of orbit)\\
- $\varphi$ true anomaly
+ \begin{tabular}{c|l|c}
+ $r$ & radius towards focal point&\\
+ $\varepsilon$ &eccentricity of the orbit&\\
+ $p$ &parameters (spartial extensions of orbit)&\\
+ $\varphi$ &true anomaly&\\
+ \end{tabular}
+
  
  \textbf{Interrelationships between parameters:}\\
  $r_a$ apocenter, $r_p$ pericenter\\
@@ -57,11 +65,15 @@
  \[r=a(1-\varepsilon\cos E)\]
  
  \textbf{Satellite Ground Tracks:}\\
- Analyse the triangle KFB in spherical coordinates.\\
- $\theta$ \indexx{latitude}: $\sin \theta = \sin i \sin (\omega + \varphi)$\\
- $\lambda$ \indexx{longitude}: $\cos \lambda_1 = \frac{\cos(\omega + \varphi)}{\cos \theta}$
+ Analyse the triangle KFB in spherical coordinates.
+ 
+ \begin{tabular}{c|l|c}
+ $\theta$ &\indexx{latitude}: &$\sin \theta = \sin i \sin (\omega + \varphi)$\\
+ $\lambda$ &\indexx{longitude}: &$\cos \lambda_1 = \frac{\cos(\omega + \varphi)}{\cos \theta}$\\
+ \end{tabular}
+
  \[ \lambda = \lambda_1 + \Omega + \lambda_G \]
- \[ \lambda_G = \lambda_{G0} - 0.25068448° /\text{min} \cdot t \text{~~~~~(Greenwich position versus $\gamma$)}\]
+ \[ \lambda_G = \lambda_{G0} - 0.25068448\degree /\text{min} \cdot t \text{~~~~~(Greenwich position versus $\gamma$)}\]
  Draw the line from the satellite to earth center, the intersection with surface is specified by $\theta$ and $\lambda$ (\indexx{subsatellite point}).
  
  \textbf{\indexx{Perturbations}}:\\
@@ -71,20 +83,56 @@
  
  \[ u(r,\phi,\Lambda) = \frac{\mu}{r} \bigg( 1+ \sum_{n=2}^{\infty}\left[ \left(\frac{R_E}{r}\right)^n \cdot J_2 \cdot P_{n0} \cos\phi + \sum_{m=1}^{n} \left(\frac{R_e}{r}\right)^n \cdot \left( C_{nm} \cos(m\Lambda) + S_{nm} \sin (m\Lambda)\right)\cdot P_{nm} (\cos \phi) \right] \bigg) \]
  \indexx{spherical harmonic expansion} with:\\
- $r$ distance from the earth center\\
- $P_{nm}$ Legendre polynomials\\
- $R_E$ radius of earth $6378 km$\\
- $J_n$, $C_{nm}$, $S_{nm}$ constants of body reflecting the mass distribution:\\
+ \begin{tabular}{c|l|c}
+ $r$ &distance from the earth center&\\
+ $P_{nm}$ &Legendre polynomials&\\
+ $R_E$ &radius of earth &$6378 km$\\
+ \end{tabular}
+ 
+ $J_n$, $C_{nm}$, $S_{nm}$ are constants of body reflecting the mass distribution:\\
  $J_n$ zonal harmonic coefficient (mass distribution independent from longitude)\\
  $C_{nm}$, $S_{nm}$ earth's tesseral harminic coefficients (for $n \neq m$) or earth's sectoral harmonic coefficients (for $n = m$)
+
  
  By far, the largest coefficient is $J_n$ (related to equatorial bulge) by $3$ orders of magnitude.\\
- Example: Molniya orbits of $63,4°$ have minimum change in position of perigee and apogee.
+ Example: Molniya orbits of $63,4\degree$ have minimum change in position of perigee and apogee.
  
  \textbf{Additional gravitational fields:}\\
  by other bodies in the solar system
+ \[ a_d = \mu_d \sqrt{\vec{R}\cdot\vec{R}} \]
+ with $\vec{R} = \frac{\vec{r}_{sd}}{\|\vec{r}_d\|}$
+ \[ \frac{a_d}{a_c} = \frac{M_d}{M_c} \left( \frac{\|\vec{r}_s\|}{\| \vec{r}_{sd} \|} \right)^3 \sqrt{1+3\cos^2 \beta} = 2 \frac{M_d}{M_c} \left( \frac{\|\vec{r}_s\|}{\| \vec{r}_{d} \|} \right)^3\]
+ \begin{tabular}{c|l|c}
+  $a_c$ & actual acceleration &\\
+ \end{tabular}
  
+ \textbf{\indexx{atmospheric drag}:}\\
+ Drag: $\vec{F}_0 = -\frac{1}{2}\rho S c_D \| \vec{v}_R \|^2 \frac{\vec{v}_r}{\| \vec{v}_r \|}$
  
+ \begin{tabular}{c|l|c}
+  $v_r$ & velocity vector of the spacecraft relative to the atmosphere& \\
+  $\rho$ & atmospheric density & \\
+  $S$& reference area of the spacecraft& \\
+  $c_D$& drag coefficient of the spacecraft (determined in wind channel)& default: $c_d \approx 2.5$\\
+ \end{tabular}
+ 
+ Main effect of altitude changes and changes of orbital period.
+ 
+ \textbf{\indexx{solar pressure}: }\\
+ \begin{tabular}{c|l|c}
+  $1AU$ & \indexx{distance earth-sun} & $149.6\cdot 10^6 km$\\
+  & energy density & $1372 \frac{W}{m^2}$\\
+ \end{tabular}
+
+ from impulse conservation law:
+ \[ p = \frac{1372 W}{c \cdot m^2} = \frac{1372 W~ s}{299793 km~m^2 } = 0.46 \cdot 10^{-5} \frac{N}{m^2}\]
+ solar pressure is increased by reflection
+ \[ p_{eff} = (1+r)p \]
+ \begin{tabular}{c|l|c}
+  $p_{eff}$ & effective pressure&\\
+  $r$& reflectivity factor&\\
+ \end{tabular}
+
  
  
 \end{chapter} 

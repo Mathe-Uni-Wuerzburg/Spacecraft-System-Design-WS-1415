@@ -1,0 +1,70 @@
+\begin{chapter}{14.11.2014}
+ \begin{section}{Onboard Data Handling (OBDH)}
+  OBDH functions:
+  \begin{itemize}
+   \item to receive, validate, decode and distribute commands
+   \item to gather, process and format the data onboard, spacecraft housekeeping and mission data
+   \item spacecraft time synchronisation, health monitoring of computer itself (watchdogs), security interfaces
+   \item autonomous reaction capabilities, redundancy
+  \end{itemize}
+  
+  standards for command message formats CCSDS:
+  \begin{itemize}
+   \item synchronisation code
+   \item adress bit
+   \item command message bits
+   \item error check bits
+  \end{itemize}
+
+  Output: discrete commands (fixed amplitude, fixed pulse derration)\\
+  Data handling combines telemetry from multiple sources and provides it for downlink to earth.
+  \begin{itemize}
+   \item analog telemetry data (conversion needed)
+  \end{itemize}
+  
+  \end{section}
+  
+  \begin{section}{Command \& Data Handling System Sizing}
+  
+  Command processing
+  \begin{itemize}
+   \item number of command output channels
+   \item requirements for stored commands
+   \item requirements for computer commands of ACS functions
+  \end{itemize}
+  Telemetry processing
+  \begin{itemize}
+   \item spacecraft housekeeping data
+   \item feedback for onboard control of spacecraft functions
+   \item routing of onboard and subsystem data \begin{itemize}
+                                                \item to and from receivers and transmitters
+                                                \item to storage systems
+                                                \item to affected system controllers
+                                               \end{itemize}
+
+  \end{itemize}
+  Timing
+  \begin{itemize}
+   \item time granularity
+   \item stability requirement
+   \item acceptable uncertainty
+  \end{itemize}
+  Computer watchdog\\
+  \textbf{constraints:}\\
+  Spacecraft Bus constraints
+  \begin{itemize}
+   \item single unit systems
+   \item multiple units, distributing system
+   \item integrated systems
+  \end{itemize}
+  Reliability ($\rightarrow$ redundancy/parts quality)\\
+  Radiation
+
+
+
+
+
+
+ \end{section}
+
+\end{chapter}
