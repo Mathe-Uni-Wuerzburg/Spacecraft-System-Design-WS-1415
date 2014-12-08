@@ -1,0 +1,32 @@
+\begin{chapter}{20.10.2014}
+\begin{enumerate}[1)]
+ \item angular Radius of Earth $\varphi$: $\sin \varphi = \frac{R_E}{R_E+h}$
+ \item compute spacecraft viewing angles from subsatellite point $(\Lambda_s,\sigma_s)$ and target point $(\Lambda_t,\sigma_t)$:
+ \[\cos \lambda = \sin\sigma_s \sin\sigma_t+\cos\sigma_s \cos\sigma_t \cos |\Lambda_s-\Lambda_t|\]
+ \[\cos A_z = \frac{\sin\sigma_t-\cos\lambda\sin\sigma_s}{\sin\lambda\cos\sigma_s}\]
+ \[\tan \eta = \frac{\sin \varphi \sin \lambda}{1-\sin \varphi \cos \lambda}\]
+ \item compute coordinates on Earth:
+ \[\cos \varepsilon = \frac{\sin\eta}{\sin\varphi}\]
+ \[\lambda + \eta+\varepsilon = 90 \degree\]
+\end{enumerate}
+
+\textbf{ground station contacts}\\
+typically a minimum elevation angle is specified for each ground station $\varepsilon_\text{min}$ below contacts are limited. $(\varepsilon_\text{min} \approx 5\degree-10\degree)$\\
+given a $\varepsilon_\text{min}$, derive the maximum Earth control angle $\lambda_\text{max}$ and the max. nadir angle $\eta_\text{max}$, and maximum range $D_\text{max}$ at which the satellite is still in the FOV of ground station.
+\[\sin\eta_\text{max} = \sin\varphi\cos\varepsilon_\text{min}\]
+\[\lambda_\text{max} = 90\degree -\varepsilon_\text{min} - \eta_\text{max}\]
+\[D_\text{max} = R_E\frac{\sin\lambda_\text{max}}{\sin\eta_\text{max}}\]
+to calculate the timing of a lfyover, we need $\lambda_\text{min}$ minimum Earth central angle between the satellite's ground track and the ground station.
+\[ \sin \lambda_\text{min} = \sin (90\degree-i)\sin \sigma_\text{gs}+\cos (90\degree-i)\cos \sigma_\text{gs} \cos\Delta\text{long} \]
+ where $\Delta$long is the longitude difference between ground station and the orbit pole \\($\sigma_\text{pole} = 90\degree -i$,$\Lambda_\text{pole} = \Lambda_\text{node}-90\degree$).
+ \[ \tan \eta_\text{min} = \frac{\sin \varphi \sin \lambda_\text{min}}{1-\sin \varphi \cos \lambda_\text{min}} \]
+ \[\varepsilon_\text{max} = 90\degree-\lambda_\text{min}-\eta_\text{min}\]
+ \[D_\text{min} = R_E \frac{\sin \lambda_\text{min}}{\sin \eta_\text{min}}\]
+ parameters at the satellites closest approach to ground station.
+ 
+ the maximum angular rate of the satellite, seen from the ground station
+ \[ \sigma_\text{max} = \frac{v_\text{sat}}{D_\text{min}}=\frac{2\pi(R_E + h)}{T D_\text{min}}\]
+ where $T$ is the orbital period
+  \[ AT = \frac{T}{180\degree} \arccos \left( \frac{\cos \lambda_\text{max}}{\cos \lambda_\text{min}} \right) \]
+ 
+\end{chapter}

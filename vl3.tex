@@ -1,0 +1,73 @@
+\begin{chapter}{17.10.2014}
+ 
+
+\textbf{Keplerian Orbit Transfer}\\
+ Calculate a transfer between two circular orbits with radius $r_A$ to $r_B$. The velocity at pericenter of the transfer ellipse:
+ \[ v_p^2 = 2 \mu \left( \frac{1}{r_A} - \frac{1}{r_A + r_B} \right) = 2 \mu \frac{r_B}{r_A(r_A+r_B)} \]
+ The required $\Delta v_A$ to inject from the transfer orbit:
+ \[ \Delta v_A = v_P - v_A = \sqrt{\frac{\mu}{r_A}} \left( \sqrt{\frac{2r_B}{r_A+r_B}} -1\right) \]
+ The required $\Delta v$ to inject from the transfer orbit into orbit with $r_B$:
+ \[ \Delta v_B = v_B - v_\text{apo} = \sqrt{\frac{\mu}{r_B}} \left( 1 - \sqrt{\frac{2r_A}{r_A+r_B}}\right) \]
+ where $v_B$ is the circular velocity at $r_B$.
+ 
+ The \indexx{Hohmann transfer} is the most energy-efficient transfer between two circular orbits.
+ \[ \Delta v_\text{total} =  \Delta v_A + \Delta v_B = \sqrt{\mu}\left[ \sqrt{\left( \frac{2}{r_A} - \frac{2}{r_A+r_B} \right)} - \sqrt{\frac{1}{r_A}} + \sqrt{\frac{2}{r_B}-\frac{2}{r_A+r_B}} - \sqrt{\frac{1}{r_B}} \right]\]
+
+ \setcounter{chapter}{2}
+ \setcounter{section}{2}
+ \begin{section}{Mission Analysis}
+ Selection of orbit parameters for most appropriate orbits for the given task.
+ 
+ \textbf{\indexx{Earth synchronous orbits}}: after a given period of time the subsatellite's ground track repeats. \indexx{Rotation of Earth}: $\tau_E$ \indexx{sidereal day} ($ = 86161.10555 + 0.015C [s]$ where $C$ is the number of centuries after 2000). As Earth rotation is in eastward direction, the satellite orbit with respect to Earch seems to have west direction.
+ \[ \Delta \Phi_R = \frac{\tau}{\tau_E}-2\pi \radrev \]
+ \begin{tabular}{c|l|c}
+  $\tau$ & satellite orbit period& 
+ \end{tabular}
+
+ $J_2$ theory taking into account Earth oblateness, we can calculate the satellite orbit plane rotation:
+ \[\Delta \Omega = \frac{3\pi J_2 R_E^2 \cos i}{a^2(1-\varepsilon^2)^2} ~~~[\text{rad}/\text{rev}]\]
+ total displacement at equator: $\Delta \Phi = \Delta \Phi_R - \Delta \Omega$.\\
+ For Earth synchronous orbits, the following property needs to be satisfied:
+ \[ n\Delta\Phi = m2\pi \]
+ \begin{tabular}{c|l|c}
+  $n$ & number of orbits before identical ground track repeats & \\
+  $m$ & number of Earth revolutions (day) before identical ground track repeats & 
+ \end{tabular}
+ 
+ \textbf{\indexx{Sun synchronous orbits}}: \\
+ the sunlight incidents repats\\
+ take into account the motion of Earth around Sun. Due to the Earth's orbit around Sun, the Earth/Sun-line intersect at points $P$ moving westward.
+ \[ \sigma = \frac{360\degree}{365.25 ~\text{days}} \approx 1 ~~~[\degree/\text{day}]\]
+ orbital period of Earth around Sun $\tau_{ES}$: $3.155815 \cdot 10^7 ~s \approx 365.25 ~\text{days}$.\\
+ angular velocity $\sigma = 2 \pi \frac{\tau_E}{\tau_{ES}}~~~[\text{rad}/\text{day}] = 2\pi \frac{\tau_E}{\tau_{ES}}\cdot \frac{\tau}{\tau_E}\radrev$\\
+ and for Sun synchronous orbits $\Leftrightarrow \Delta \Omega = \sigma$.\\
+ Sun and Earth synchronous orbit:
+ \[ n(\Delta\Phi_R - \Delta\Omega) = m2\pi \Rightarrow n\tau\left(1-\frac{\tau_E}{\tau_{ES}}\right) = m\tau_E \]
+ displacement between subsequent orbits ($\rightarrow$ gap in observation areas): 
+ \[ \Delta\Phi = 2\pi\tau\left(\frac{1}{\tau_E}-\frac{1}{\tau_{ES}}\right) = 7.27\cdot10^{-5}\cdot \tau\radrev \]
+ typical Earth observation orbits: $550 - 750~km$ above surface $\Rightarrow \Delta\Phi \approx 4.3\cdot 10^{-1} ~\text{rads}$ and offset $\approx 2875~km$.
+ 
+ \textbf{orbit change maneuvers}\\
+ based on impulse conservation law\\
+ propulsion systems:\\
+ \begin{tabular}{l|l}
+  Hydrazin & $2.2 \frac{km}{s}$ particle velocity \\
+  two-component & $3 \frac{km}{s}$ particle velocity \\
+  ion-thrusters & $30 \frac{km}{s}$ particle velocity 
+ \end{tabular}
+ 
+ \[\Delta v_s m_s = -\Delta m_s v_p\]
+ \begin{tabular}{c|l|c}
+  $\Delta m_s$ & reduction of satellite mass due to ejected propellant & \\
+  $v_p$ & velocity of propellant ejection & \\
+ \end{tabular}
+ 
+ \[\Delta v_s = -\frac{\Delta m_s}{m_s}v_p\]
+ \[\int\limits_{v_0}^v dv = -v_p \int\limits^{m_s-m_p} \frac{dm}{m}\]
+ \[\Delta v_s = v_p (\ln m_s - \ln (m_s -m_p))\]
+ \textbf{\indexx{Ziolkowski rocket equation}}:
+ \[m_\text{after} = m_\text{before} \exp \left(\frac{-\Delta v_s}{v_p}\right)\]
+
+
+ \end{section}
+\end{chapter}

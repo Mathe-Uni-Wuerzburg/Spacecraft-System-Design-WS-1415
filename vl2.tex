@@ -127,12 +127,40 @@
  from impulse conservation law:
  \[ p = \frac{1372 W}{c \cdot m^2} = \frac{1372 W~ s}{299793 km~m^2 } = 0.46 \cdot 10^{-5} \frac{N}{m^2}\]
  solar pressure is increased by reflection
- \[ p_{eff} = (1+r)p \]
+ \[ p_\text{eff} = (1+r)p \]
  \begin{tabular}{c|l|c}
-  $p_{eff}$ & effective pressure&\\
+  $p_\text{eff}$ & effective pressure&\\
   $r$& reflectivity factor&\\
  \end{tabular}
-
  
+ At equatorial orbits the solar pressure affects a change of eccentricity $\varepsilon$.
  
+ \textbf{orbit change manouvers:}\\
+ Based on impule conservation law.\\
+ Propulsion systems:\\
+ \begin{tabular}{rcl}
+  Hydrazin & $2.2\frac{km}{2}$ & particle velocity\\
+  2-component & $3\frac{km}{2}$ & particle velocity\\
+  ion thrusters & $30\frac{km}{2}$ & particle velocity\\
+ \end{tabular}
+ \[ \Delta v_s m_s = -\Delta m_s v_p \]
+ \begin{tabular}{c|l|c}
+  $\Delta m_s$ &reduction of satellite mass due to ejected propellant&\\
+  $v_p$ &velocity of propellant ejection&\\
+ \end{tabular}
+ \[ \Delta v_s = -\frac{\Delta m_s}{m_s}v_p \]
+ \[ \int_{v_0}^v dv = -v_p \int_{m_s}^{m_s-m_p} \frac{dm}{m}\]
+ \[ \Delta v_s = v_p (\log_2 m_s - \log_2 (m_s-m_p)) \]
+ \indexx{Rocket equation}, \indexx{Ziolkowski equation}:
+ \[ m_\text{after} = m_\text{before} \cdot e^{\frac{-\Delta v_s}{v_p}} \]
+ Sun and earth synchronous satellites \index{sun-synchronous orbits}:\\
+ \begin{tabular}{ccc}
+  m & n & corresponding altitude\\
+  1&14&$894 km$\\
+  1&13&$567 km$\\
+  1&12&$275 km$\\
+  2&22&\\
+ \end{tabular}
+ 
+ minimum drift orbits: $\frac{n \pm 1}{m} = k$, $k \in \mathbb{N}$, integer. orbits of successive days to fill the displacements between two successive orbits.\\
 \end{chapter} 
