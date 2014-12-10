@@ -1,15 +1,4 @@
 \begin{chapter}{20.10.2014}
-\begin{enumerate}[1)]
- \item angular Radius of Earth $\varphi$: $\sin \varphi = \frac{R_E}{R_E+h}$
- \item compute spacecraft viewing angles from subsatellite point $(\Lambda_s,\sigma_s)$ and target point $(\Lambda_t,\sigma_t)$:
- \[\cos \lambda = \sin\sigma_s \sin\sigma_t+\cos\sigma_s \cos\sigma_t \cos |\Lambda_s-\Lambda_t|\]
- \[\cos A_z = \frac{\sin\sigma_t-\cos\lambda\sin\sigma_s}{\sin\lambda\cos\sigma_s}\]
- \[\tan \eta = \frac{\sin \varphi \sin \lambda}{1-\sin \varphi \cos \lambda}\]
- \item compute coordinates on Earth:
- \[\cos \varepsilon = \frac{\sin\eta}{\sin\varphi}\]
- \[\lambda + \eta+\varepsilon = 90 \degree\]
-\end{enumerate}
-
 \textbf{ground station contacts}\\
 typically a minimum elevation angle is specified for each ground station $\varepsilon_\text{min}$ below contacts are limited. $(\varepsilon_\text{min} \approx 5\degree-10\degree)$\\
 given a $\varepsilon_\text{min}$, derive the maximum Earth control angle $\lambda_\text{max}$ and the max. nadir angle $\eta_\text{max}$, and maximum range $D_\text{max}$ at which the satellite is still in the FOV of ground station.

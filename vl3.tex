@@ -37,37 +37,78 @@
  \textbf{\indexx{Sun synchronous orbits}}: \\
  the sunlight incidents repats\\
  take into account the motion of Earth around Sun. Due to the Earth's orbit around Sun, the Earth/Sun-line intersect at points $P$ moving westward.
- \[ \sigma = \frac{360\degree}{365.25 ~\text{days}} \approx 1 ~~~[\degree/\text{day}]\]
+ \[ \theta = \frac{360\degree}{365.25 ~\text{days}} \approx 1 ~~~[\degree/\text{day}]\]
  orbital period of Earth around Sun $\tau_{ES}$: $3.155815 \cdot 10^7 ~s \approx 365.25 ~\text{days}$.\\
- angular velocity $\sigma = 2 \pi \frac{\tau_E}{\tau_{ES}}~~~[\text{rad}/\text{day}] = 2\pi \frac{\tau_E}{\tau_{ES}}\cdot \frac{\tau}{\tau_E}\radrev$\\
- and for Sun synchronous orbits $\Leftrightarrow \Delta \Omega = \sigma$.\\
+ angular velocity $\theta = 2 \pi \frac{\tau_E}{\tau_{ES}}~~~[\text{rad}/\text{day}] = 2\pi \frac{\tau_E}{\tau_{ES}}\cdot \frac{\tau}{\tau_E}\radrev$\\
+ and for Sun synchronous orbits $\Leftrightarrow \Delta \Omega = \theta$.\\
  Sun and Earth synchronous orbit:
  \[ n(\Delta\Phi_R - \Delta\Omega) = m2\pi \Rightarrow n\tau\left(1-\frac{\tau_E}{\tau_{ES}}\right) = m\tau_E \]
  displacement between subsequent orbits ($\rightarrow$ gap in observation areas): 
  \[ \Delta\Phi = 2\pi\tau\left(\frac{1}{\tau_E}-\frac{1}{\tau_{ES}}\right) = 7.27\cdot10^{-5}\cdot \tau\radrev \]
  typical Earth observation orbits: $550 - 750~km$ above surface $\Rightarrow \Delta\Phi \approx 4.3\cdot 10^{-1} ~\text{rads}$ and offset $\approx 2875~km$.
  
- \textbf{orbit change maneuvers}\\
- based on impulse conservation law\\
- propulsion systems:\\
- \begin{tabular}{l|l}
-  Hydrazin & $2.2 \frac{km}{s}$ particle velocity \\
-  two-component & $3 \frac{km}{s}$ particle velocity \\
-  ion-thrusters & $30 \frac{km}{s}$ particle velocity 
+ Sun and earth synchronous satellites \index{sun-synchronous orbits}:\\
+ \begin{tabular}{ccc}
+  m & n & corresponding altitude\\
+  1&14&$894 km$\\
+  1&13&$567 km$\\
+  1&12&$275 km$\\
+  2&22&\\
  \end{tabular}
  
- \[\Delta v_s m_s = -\Delta m_s v_p\]
+ minimum drift orbits: $\frac{n \pm 1}{m} = k$, $k \in \mathbb{N}$, integer. orbits of successive days to fill the displacements between two successive orbits.\\
  \begin{tabular}{c|l|c}
-  $\Delta m_s$ & reduction of satellite mass due to ejected propellant & \\
-  $v_p$ & velocity of propellant ejection & \\
+  $k$ & orbits of successive days to fill the displacements between two successive orbits& 
  \end{tabular}
  
- \[\Delta v_s = -\frac{\Delta m_s}{m_s}v_p\]
- \[\int\limits_{v_0}^v dv = -v_p \int\limits^{m_s-m_p} \frac{dm}{m}\]
- \[\Delta v_s = v_p (\ln m_s - \ln (m_s -m_p))\]
- \textbf{\indexx{Ziolkowski rocket equation}}:
- \[m_\text{after} = m_\text{before} \exp \left(\frac{-\Delta v_s}{v_p}\right)\]
+ \underline{Example:} Landsat 1/2\\
+ 18 day repeat period minimum drift orbit
+ \[ \tau \approx 103.3\text{min, } i=99\degree \text{, } \varepsilon = 0.002\text{, apogee}=920km\text{, descending node: } 9:38 \text{local time}\]
+ $\Rightarrow$ orbit seperation between successive orbits $\approx 2875km$.\\
+ $m=18 \Rightarrow$ distance between adjacent ground tracks $=160km$.
+ 
+ \textbf{\indexx{Eclipse calculation}}:\\
+ Angle between earth-sun direction $\vec{s}$ and the orbit plane $=\beta$.
+ \[ \beta = \sin^{-1}(\vec{s}\vec{n}) \]
+ \begin{tabular}{c|l|c}
+  $\vec{n}$ & normal to orbit plane & 
+ \end{tabular}
+ \[\sin \beta^* = \frac{r_E}{r_E +h} \Rightarrow \beta^* = \sin^{-1}\left(\frac{r_E}{r_E +h}\right) \]
+ \[ E_1E_2 = 2\Delta v \text{   eclipse orbital arc}\]
+ \[\Delta v = \cos^{-1}\left(\frac{\cos \beta^*}{\cos \beta}\right)\text{   in triangle }ACE_1 \]
+ eclipse fraction of a circular orbit:
+ \[ F_e = \frac{2\Delta v}{2\pi} = \frac{1}{\pi}\frac{\sqrt{h^2+2r_E h}}{(r_E+h)\cos\beta} \text{   [rad]}\]
+ \begin{tabular}{c|l|c}
+  $h$ & altitude & \\
+  $\beta$ & angle sun-orbit-plane& \\
+  $r_E$ & earth radius & 
+ \end{tabular}
+ 
+  \indexx{launch energy}: $\varepsilon = \cos^{-1}(\cos^2 i + \sin^2 i -\cos \Delta \Omega)$\\
+  change angle related to plane (proportional):\\
+  $\Delta \Omega$: longitudal seperation\\
+  launch window: $2\frac{\Delta\Omega}{w_c} \Rightarrow \Delta\Omega = w_c t$
+  \begin{tabular}{c|l|c}
+   $w_c$ & earth rotation rate & 
+  \end{tabular}
 
-
- \end{section}
+  \textbf{ground contact and coverage analysis}
+  \[\sin \rho = \cos \lambda_0 = \frac{r_E}{r_E+h}\]
+  from known $\lambda$ (from $\Lambda_t, \theta_t / \Lambda_s, \theta_s$) we derive $\eta$.
+  \[ \tan\eta = \frac{\sin\rho\sin\lambda}{1-\sin\rho\sin\lambda} \]
+  \[ \cos\varepsilon = \frac{\sin\eta}{\sin\rho} \Rightarrow \sin\eta = \cos\varepsilon\sin\rho\]
+  \[ \eta+\varepsilon+\lambda = 90\degree \]
+  \[D =r_E \frac{\sin\lambda}{\sin\eta}\]
+  
+  \begin{enumerate}[1)]
+ \item angular Radius of Earth $\varphi$: $\sin \varphi = \frac{R_E}{R_E+h}$
+ \item compute spacecraft viewing angles from subsatellite point $(\Lambda_s,\theta_s)$ and target point $(\Lambda_t,\theta_t)$:
+ \[\cos \lambda = \sin\theta_s \sin\theta_t+\cos\theta_s \cos\theta_t \cos |\Lambda_s-\Lambda_t|\]
+ \[\cos A_z = \frac{\sin\theta_t-\cos\lambda\sin\theta_s}{\sin\lambda\cos\theta_s} ~~~\text{\indexx{Azimuth}}\]
+ \[\tan \eta = \frac{\sin \varphi \sin \lambda}{1-\sin \varphi \cos \lambda}\]
+ \item compute coordinates on Earth:
+ \[\cos \varepsilon = \frac{\sin\eta}{\sin\varphi}\]
+ \[\lambda + \eta+\varepsilon = 90 \degree\]
+\end{enumerate}
+  \end{section}
 \end{chapter}
