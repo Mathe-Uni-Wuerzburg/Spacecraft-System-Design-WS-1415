@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{upgreek}
+\usepackage{geometry}
+
+\geometry{verbose,tmargin=1cm,headheight=80pt,lmargin=2cm,bmargin=4cm,rmargin=2.5cm}
+
+\title{Exercise 8 - Solution}
+\author{}
+\date{}
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\section*{Task 8.1}
+series conduction: \[\sigma_{tot} = \frac{1}{\frac{1}{\sigma_1}+\frac{1}{\sigma_2} + \frac{1}{\sigma_3}}\]
+\[\sigma_1 = \frac{L_1}{K_1A_c}, \sigma_2 = \frac{1}{\alpha_cA_c}, \sigma_3 = \frac{L_2}{K_2A_{eff}}\]
+\[\Rightarrow \sigma_{tot} = 0.834 \frac{W}{K}\]
+\[Q = \sigma_{tot}(T_{box}-T_2) \Rightarrow T_{Box} = \frac{Q}{\sigma_{tot}}+T_2 = 30.02^{\circ}C\]
+
+\section*{Task 8.2}
+given: $f=2GHz$, $r=\frac{880}{221}$, $v=10\frac{km}{s}$, $d_{rate}=10\frac{kbit}{s}$, $c=3\cdot 10^8\frac{m}{s}$, $f_c=150kHz$ 
+
+\subsection*{1.}
+\begin{itemize}
+ \item distance is increasing: 
+ \[ \Delta f_{up} = -\frac{f \cdot v}{c} = -66.67kHz\]
+ \item distance is decreasing: 
+ \[\Delta f_{down} = -\frac{(f+f_{up}) \cdot v \cdot r}{c} = -265.45kHz\]
+\end{itemize}
+
+\subsection*{2.}
+\begin{itemize}
+ \item Doppler shift on received downlink subcarrier:
+ \[\Delta f_{sub} = -\frac{v\cdot f_c}{c} = -5Hz\]
+ \item Doppler shift on the TM data rate:
+ \[\Delta f_{dop} = -\frac{v \cdot d_{rate}}{c} = -0.33\frac{bit}{s}\]
+\end{itemize}
+
+\subsection*{3.}
+The shape of the transmitted rectangular TM bit stream does not change, it is still rectangular. However, the frequency changes. 
+
+\section*{Task 8.3}
+\subsection*{1.}
+The difference between high gain and low gain antenna is the respective beam width. A high gain antenna has a focused, narrow radiowave beam
+width, while a low gain antenna has a broad radiowave beam width. 
+\subsection*{2.}
+A satellite has both a high gain and a low gain antenna for failure reasons. Normally the high gain antenna is used for the primary link 
+while the low gain antenna is used as a backup.
+\subsection*{3.}
+Low gain antennas should be distributed on the space craft in a way, that they cover as many directions as possible. If for example a 
+spacecraft has only two low gain antennas, they should be placed on opposite sides of the spacecraft. 
+
+
+\end{document}

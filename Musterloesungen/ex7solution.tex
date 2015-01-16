@@ -1,0 +1,67 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{upgreek}
+\usepackage{geometry}
+
+\geometry{verbose,tmargin=1cm,headheight=80pt,lmargin=2cm,bmargin=4cm,rmargin=2.5cm}
+
+\title{Exercise 7 - Solution}
+\author{}
+\date{}
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\section*{Task 7.1}
+\[A_{eff} = A_1\cdot \frac{\rho_{\text{AluCore}}}{\rho_{\text{Alu}}} = 0.01185m^2\]
+
+\[Q[W] = \frac{K_1\cdot A_{eff}\cdot (T_1-T_2)}{L_1} W = 426.6W\]
+
+\section*{Task 7.2}
+ \begin{enumerate}
+  \item Earth albedo: about 20\% to 40\% of the sun light hitting the Earth's surface is reflected and thus influences satellites 
+  \item Earth IR: the Earth itself emitts an infrared radiation that influences satellites
+ \end{enumerate}
+
+
+\section*{Task 7.3}
+
+\begin{enumerate}
+ \item \[L[dB] = 92.4dB + 20log_{10}(2) + 20log_{10}(10^8) = 258.42dB\]
+ \item \[L = \frac{L[dB]}{0.3dB} = 861.4m\]
+ \item \textbf{Free Space Path Loss}:
+Steady decrease of power flux as the radio wave is popagating away from the source antenna (no real loss).\\
+\textbf{Cable loss}:
+Real loss of signal power due to dissipation in the medium with ohmic losses.
+\end{enumerate}
+
+\section*{Task 7.4}
+$P_1 = 50W$, $P_2 = 25W$
+
+\[P_1[dBW] = 10log_{10}(50) = 16.99dBW\]
+\[P_2[dBW] = 10log_{10}(25) = 13.979dBW\]
+
+\noindent $\Rightarrow$ reduced power: $G_t \approx 3dB$ 
+
+\[G_t = 20log_{10}(D) \Rightarrow D = 10^{\frac{3}{20}} = 1.4125\]
+
+\noindent $\Rightarrow$ Increasing the groundstation antenna diameter by a factor 1.4125 compensates the 3dB.
+
+\end{document}

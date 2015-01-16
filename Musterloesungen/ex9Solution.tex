@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{upgreek}
+\usepackage{geometry}
+
+\geometry{verbose,tmargin=1cm,headheight=80pt,lmargin=2cm,bmargin=4cm,rmargin=2.5cm}
+
+\title{Exercise 9 - Solution}
+\author{}
+\date{}
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\section*{Task 9.1}
+\begin{enumerate}
+ \item A semiconductor (for example of group IV) is doped, when a group of lattice atoms is replaced by a atoms of a higher or lower (group III
+ or V) lattice atoms. Lower lattice atoms are called donors, higher lattice atoms are called acceptors.
+ \item The band gap is the difference in energy in a substance between electron orbitals in which the electrons are not free to move (the valence band) 
+ and orbitals in which they are relatively free and will carry a current (the conduction band).
+\end{enumerate}
+
+
+\section*{Task 9.2}
+given: $k = 1.38\cdot 10^{-23} \frac{Ws}{K}$, $T = 25K$, $B=1Hz$, $\eta = 60\%$, $d_1 = 12m$ $d_2=3m$, $\lambda=10cm$, $P_{tr} = 5W$
+
+\begin{enumerate}
+ \item \[N = kTB = 3.45 \cdot 10^{-22}W = -214.62dBW = -184.62dBm\]
+ \item \[A_{eff,rec} = \eta\cdot\pi\cdot\frac{d_1^2}{4} = 67.86m^2\]
+ \item \[A_{eff,tr} = \eta\cdot\pi\cdot\frac{d_2^2}{4} = 4.24m^2\]
+ \[G_{tr} = A_{eff,tr}\cdot \frac{4\pi}{\lambda^2} = 5328.14 = 37.27dBi\]
+ \item \[\frac{S}{N}=1 \Rightarrow S=N = P_{rec}\]
+ \[P_{rec} = P_{tr}\cdot G_{tr}\cdot \frac{A_{eff,rec}}{4\pi R^2}\]
+ \[\Rightarrow R = \sqrt{\frac{P_{tr}\cdot G_{tr}\cdot A_{eff,rec}}{4\pi N}} = 2.04\cdot 10^{13}m = 2.04\cdot 10^{10}km\]
+\end{enumerate}
+
+\section*{Task 9.3}
+\[P_a = 19dBW = 79.43W\]
+\[P_b = (P_a +53-220+(-3))dBW = -151dBW = 7.9\cdot 10^{-16}W\]
+\[P_c = (P_a-3)dBW = -154dBW = 3.98\cdot 10^{-16}W\]
+\[L[dB] = 92.4 + 20log(F) + 20log(d) \Rightarrow d = 1,199,416.45km\]
+\end{document}

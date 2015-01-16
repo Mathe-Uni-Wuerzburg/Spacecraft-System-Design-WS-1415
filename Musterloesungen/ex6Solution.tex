@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{upgreek}
+\usepackage{geometry}
+
+\geometry{verbose,tmargin=1cm,headheight=80pt,lmargin=2cm,bmargin=4cm,rmargin=2.5cm}
+
+\title{Exercise 6 - Solution}
+\author{}
+\date{}
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\section*{Task 6.1}
+
+formula to convert W to dBW: \[P[dBW] = 10\cdot log_{10}\left(\frac{P[W]}{1W}\right)\]
+formula to convert dBW to W: \[P[W] = 1W\cdot 10^{\frac{P[dBW]}{10}}\]
+formula to calculate the gain G: \[G = 10\cdot log_{10}\left(\frac{P_1}{P_2}\right) \Rightarrow \frac{P_1}{P_2} = 10^{\frac{G}{10}}\]
+
+\subsection*{1a)}
+\begin{itemize}
+ \item $P[W] = 10W$ \[P[dBW] = 10\cdot log_{10}\left(\frac{10W}{1W}\right) = 10dBW\]
+ \item $P[W] = 5\cdot 10^{-12}$ \[P[dBW] = 10\cdot log_{10}\left(\frac{10^{-12}W}{1W}\right) = -120dBW\]
+ \item $P[W] = 20kW$ \[P[dBW] = 10\cdot log_{10}\left(\frac{2\cdot 10^4W}{1W}\right) = 43.01dBW\]
+ \item $P[dBW] = -178dBW$ \[P[W] = 1W\cdot 10^{\frac{-178dBW}{10}} = 1.58\cdot 10^{-18}W\]
+\end{itemize}
+
+\subsection*{1b)}
+\begin{itemize}
+ \item $G = 20dB$ \[\frac{P_1}{P_2} = 10^{\frac{20}{10}} = 100\]
+ \item $G = 0dB$ \[\frac{P_1}{P_2} = 10^{\frac{0}{10}} = 1\]
+ \item $G = 6dB$ \[\frac{P_1}{P_2} = 10^{\frac{6}{10}} = 3.988\]
+ \item $G = -15dB$ \[\frac{P_1}{P_2} = 10^{\frac{-15}{10}} = 0.0316\]
+\end{itemize}
+
+\subsection*{1b)}
+$\frac{G}{T} = \frac{13dB}{K}$ \[\frac{P_1}{P_2} = 10^{\frac{13}{10}} = 19.95\] \[ \Rightarrow \frac{P_1}{P_2}\cdot \frac{1}{K} = \frac{19.95}{K}\]
+
+\subsection*{2a)}
+$G = -5dB +20dB -2.5dB$ \[G_{log} = -5dB +20dB -2.5dB = 12.5dB\] \[G_{lin} = 10^{\frac{12.5dB}{10}} = 17.783\]
+
+\subsection*{2b)}
+$EIRP = P + G = 10dBW + 30dBi$ \[EIRP_{log} = 10dBW + 30dBi = 40dBW\] \[EIRP_{lin} = 1W \cdot 10^{\frac{40dBW}{10}} = 10,000W\]
+
+\subsection*{3.}
+$G = 30dBm$ \[P[W] = \frac{1}{1000}W\cdot 10^{\frac{30}{10}} = 1W\] \[P[dBW] = 10\cdot log_{10}\left(\frac{1W}{1W} \right) = 0dBW\]
+
+\subsection*{4.}
+$P = -178dBW$ \[P[W] = 1W\cdot 10^{\frac{-178dBW}{10}} = 1.58\cdot 10^{-18}W\] \[P[dBm] = 10\cdot log_{10}(1000\cdot 1.58\cdot 10^{-18}) = -148.02dBm\]
+
+\section*{Task 6.2}
+\[Q = A_r \varepsilon_{IR} \sigma T_r^4\]
+\[T_{r_1}[Q=210W] = \left[\frac{210W}{0.5625m^2\cdot 0.85\cdot 5.67\cdot 10^{-8}\frac{W}{m^2K^4}} \right]^\frac{1}{4} = 296.74K\]
+\[T_{r_2}[Q=100W] = 246.44K\]
+\[Q = A_r \varepsilon_{IR} \sigma T_r^4 = 0.5625m^2\cdot 0.85\cdot 5.67\cdot 10^{-8}\frac{W}{m^2K^4}\cdot (270K)^4 = 144.1W\]
+\[\Rightarrow P = 144.1W-100W = 44.1W \text{ (just heater)}\]
+\[A_r = \frac{Q}{\varepsilon_{IR}\sigma T_r^4} = \frac{210W}{0.85\cdot 5.67\cdot 10^{-8}\frac{W}{m^2K^4} \cdot (310K)^4} = 0.4718m^2\]
+% 0.5625m^2\cdot 0.85\cdot 5.67\cdot 10^{-8}\frac{W}{m^2K^4}
+\[Q = A_r \varepsilon_{IR} \sigma T_r^4 = 0.4718m^2 \cdot 0.5625m^2\cdot 0.85\cdot 5.67\cdot 10^{-8}\frac{W}{m^2K^4}\cdot (220K)^4 = 120.8W\]
+\[\Rightarrow P = 120.8W-100W = 20.8W \text{ (partially isolated heater)}\]
+louver: 
+\[Q = A_r \varepsilon_{IR} \sigma T_r^4 = 0.8\cdot 0.5625m^2\cdot 0.85\cdot 5.67\cdot 10^{-8}\frac{W}{m^2K^4}\cdot (310K)^4 = 200.3W\]
+optimum: insulate $0.5625m^2 - 0.4718m^2 = 0.0907m^2$ and use a heater $20.8W$ (ok as well: $44.1W$)
+
+\end{document}

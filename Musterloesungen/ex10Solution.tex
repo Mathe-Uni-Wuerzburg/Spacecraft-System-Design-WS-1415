@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{upgreek}
+\usepackage{geometry}
+
+\geometry{verbose,tmargin=1cm,headheight=80pt,lmargin=2cm,bmargin=4cm,rmargin=2.5cm}
+
+\title{Exercise 10 - Solution}
+\author{}
+\date{}
+
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\section*{Task 10.1}
+\begin{enumerate}
+ \item The Fermi energy $E_F$ is the energy difference between the conduction band and the valence band at 0 Kelvin. An electron in the valence band can jump to the 
+ conduction band by gaining an amount of energy equal to $E_F$.
+ \item given: $T=300K$, $E = E_F + 0.1eV$, $k = 8.617343\cdot 10^{-5}\frac{eV}{K}$
+ \[f(E) = \frac{1}{1+e^{\left(\frac{E-E_F}{kT}\right)}} = \frac{1}{1+e^{\left(\frac{E_F + 0.1eV - E_F}{kT}\right)}} = 
+ \frac{1}{1+e^{\left(\frac{0.1eV}{kT}\right)}} = 0.020468879 \approx 2\%\]
+ \item given: $T'=600K$ $E = E_F + 0.1eV$, $k = 8.617343\cdot 10^{-5}\frac{eV}{K}$
+ \[f(E) = \frac{1}{1+e^{\left(\frac{E-E_F}{kT'}\right)}} = \frac{1}{1+e^{\left(\frac{E_F + 0.1eV - E_F}{kT'}\right)}} = 
+ \frac{1}{1+e^{\left(\frac{0.1eV}{kT'}\right)}} = 0.126299213 \approx 12.6\%\]
+ The probability, that an energy level E contains an electron, increased. This is due to higher temperature which leads to higher thermal energies of 
+ electrons which results in a higher possiblities that electrons make their way through the band gap into the conduction band. 
+\end{enumerate}
+
+\section*{Task 10.2}
+ \begin{enumerate}
+  \item BOL = used to determine the condition of states of the spacecraft over its lifetime in order to take into account that the component experiences 
+  degradation
+  \item EOL = power requirements at end of life are important to guarantee the successful completion of the mission. Oversizing at BOL results in enough 
+  power at EOL
+ \end{enumerate}
+
+\begin{enumerate}
+ \item  BOL = conditions of spacecraft component at the beginning of life, EOL = power requirements at end of life.
+ \item  Since solar cells and batteries have limited lifetimes and a performance degradation, the design of a satellite must account for BOL and EOL. 
+\end{enumerate}
+
+\section*{Task 10.3}
+\begin{enumerate}
+ \item \[P_{solArr} = \frac{\frac{\left(\text{power required in eclipse}\right)\cdot \left(\text{time in eclipse}\right)}{\text{path efficiency in 
+ eclipse}} + \frac{\left(\text{power required in daylight}\right)\cdot \left(\text{time in daylight}\right)}{\text{path efficiency in 
+ daylight}}}{\text{time in daylight}} = \]
+\[ = \frac{\frac{100W\cdot20min}{0.65} + \frac{330W\cdot68min}{0.85}}{68min} = 438.01W\]
+ \item \[P_{BOL} = P_o \cdot I_d \cdot cos(\Theta) = 253\frac{W}{m^2}\cdot 0.77\cdot cos(23.5^{\circ}) = 178.65\frac{W}{m^2}\]
+ \item calculating new $I_d$: \[I_d = (1-0.0275)^5 = 0.87\] 
+ \[P_{EOL} = P_{BOL} \cdot I_d = 155.4\frac{W}{m^2}\]
+ \item \[A_{solArr} = \frac{P_{solArr}}{P_{EOL}} = \frac{438.01W}{155.4W}m^2 = 2.82m^2\]
+ \item \[C_{\text{battery}} = \frac{\left(\text{power required in eclipse}\right)\cdot \left(\text{time in eclipse}\right)}{\left(\text{depth of 
+ discharge}\right)\cdot\left(\text{transmission efficiency}\right)} =\]
+ \[ = \frac{100W\cdot 22min}{0.2\cdot 0.9} = 203.70Wh\]
+ convert to Ah: 
+ \[C_{\text{battery}}[Ah] = \frac{C_{\text{battery}}}{U} = \frac{203.70Wh}{27.1V} = 7.52Ah\]
+\end{enumerate}
+
+\end{document}
