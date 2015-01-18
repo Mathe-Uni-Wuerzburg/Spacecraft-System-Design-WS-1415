@@ -1,0 +1,57 @@
+\section{Distributed Satellite Systems}
+\begin{itemize}
+ \item \f{constellation}: similar trajectories without relative position control.
+ \item \f{formation}: closed-loop onboard control for topology in the group.
+ \item \f{swarm}: similar vehicles cooperating without fixed positions, selfdetermined.
+ \item \f{cluster}: heterogenous system of vehicles for joint objective.
+\end{itemize}
+requirements on distributed satellite systems: coordination of
+\begin{itemize}
+ \item orbits at different altitudes
+ \item optimal control strategies for position/attitude of components
+ \item activities for heterogenous sensors
+ \item information flow and storage
+\end{itemize}
+\f{Walker Delta Pattern Constellation}
+\[ i: t/p/f \]
+\begin{itemize}
+ \item i: inclination
+ \item t: total $\sharp$ satellites
+ \item p: $\sharp$ equally shaped orbit planes
+ \item f: relative phase difference between satellites in adjacent planes
+\end{itemize}
+Example: Galileo is $56\degree: 27/3/1$ with circular orbits ($h =23222km$), nine satellites always in view, one spare satellite in each plane.
+\f{earth surface converage}
+$ s = \frac{t}{p}$ number of satellites equally spaced in plane with angular distance $\Delta v = \frac{360\degree}{s}$. There are two cases:
+\begin{itemize}
+ \item $\Delta v < 2\cdot \lambda_\text{max} \Rightarrow$ area of continuous coverage exists (``street of coverage'')
+ \item $\Delta v > 2\cdot \lambda_\text{max} \Rightarrow$ no street of coverage
+\end{itemize}
+Street-width: $\cos \lambda_\text{street} = \frac{\cos\lambda_\text{max}}{\cos\frac{\Delta v}{2}}$
+
+\f{formation flying arcitectures and dynamics}
+\begin{itemize}
+ \item \f{virtual structure}: treated as single structure
+ \item \f{behavioral strategies}: distributed control approach, following nature.
+ \item \f{leader-follower}: divided into leaders and followers. followers track designated leaders with prescribed offset. absolute/relative control architecture.
+\end{itemize}
+
+\f{communication in low-earth orbit distributed satellite systems}
+\begin{itemize}
+ \item comm and tele-operation infrastructure is key element for distributed systems
+ \item transfer position and observation data for formation flying
+ \item amount of data increases with swarm size
+ \item analyse pre-processing procedures, intersatellite links and ground station links
+\end{itemize}
+
+\f{conclusion on distributed satellite systems}
+\begin{itemize}
+ \item research field due to paradigm shift from one large spacecraft to several smaller crafts
+ \item higher fault tolerance and robustness
+ \item swarms are scaleable
+ \item gun launches into orbit
+ \item comination of big and small spacecrafts
+ \item swarms for survailance and earth observation
+ \item LEO $\rightarrow$ high spatial resolution
+ \item higher temporal resolution is provided by constellations with several satellites in the same orbit
+\end{itemize}

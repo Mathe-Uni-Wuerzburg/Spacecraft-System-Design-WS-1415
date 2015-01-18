@@ -1,0 +1,58 @@
+\section{Mechanics}
+\f{mechanical system engineering}
+\begin{itemize}
+ \item \f{mechanical specs}: requirements on satellite, components and equipment
+ \item \f{verification plan}: ``how to prove satellite complies specs?'' test, simulations, similarity
+ \item \f{test plan}: test flow, model philosophy (QM/FM$\leftrightarrow$PFM)
+ \item \f{design loads}: simplified load cases for components \& equipment
+\end{itemize}
+
+\f{requirements on satellite structures}\\
+\begin{tabular}{ll}
+    \tabitem external shape &
+    \tabitem mass, center of gravity\\
+    \tabitem resonance frequency&
+    \tabitem thermo-elastic distortion\\
+    \tabitem interfaces&
+    \tabitem environment (vacuum, debris, etc.)\\
+    \tabitem margin of safety\\
+\end{tabular}
+
+\f{random vibration loads}
+\begin{itemize}
+ \item white noise: range $20-2000Hz$, max levels at $80-300Hz$
+ \item mainly acoustic excitation under fairing
+ \item depends on location, orientation, mass
+ \item equivalent design loads: 3 times root mean square (3 sigma value)
+\end{itemize}
+
+\f{shock events}
+\begin{itemize}
+ \item launcher-induced: stage separation, fairing
+ \item S/C release: clampband, discrete pyro devices
+ \item appendage release: protechnic/deployment shock
+\end{itemize}
+
+\f{structural engineering -- fundamentals}
+\begin{itemize}
+ \item hooke's law: $\sigma = E\cdot\varepsilon$
+ \item strain def: $\varepsilon = \frac{\Delta L}{L}$
+ \item normal stress in rod: $\sigma = \frac{F}{A}$
+ \item bending stress in beam: $\sigma = \frac{M}{W}$
+ \item thermo-elastic strain: $\varepsilon = CTE\cdot \Delta T$
+\end{itemize}
+
+\f{Margin of safety:}
+\[ MOS = \left(\frac{S_a}{S_e\cdot FOS} -1\right)\cdot 100 \stackrel{!}{\geq} 0,0 ~~~ [\%] \]
+\begin{tabular}{lll}
+ \tabitem $S_a$ allowable stress &
+ \tabitem $S_e$ applied stress &
+ \tabitem $FOS$ Factor of safety\\
+\end{tabular}
+
+\f{safety factors:}
+\begin{itemize}
+ \item material safety factors on yield
+ \item modelling safety factors covering analysis uncertainties
+ \item specific factors, e.g. for bonded connections
+\end{itemize}
