@@ -15,6 +15,7 @@
 \usepackage{upgreek}
 \usepackage{color}
 \usepackage{gensymb}
+\usepackage{enumerate}
 
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2.5cm,headheight=80pt}
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
@@ -44,5 +45,87 @@
 
 \begin{document}
 \maketitle
+\begin{section}{Exercise}
+\setcounter{subsection}{2}
+ \begin{subsection}{}
+  \[v_\text{esc} = \sqrt{\frac{2\mu_M}{r_M}} \Rightarrow \mu_M = \frac{v_\text{esc}^2}{2} r_M = 4.245\cdot10^4 \frac{km^3}{s^2}\]
+  \[g_\text{Mars} = \frac{\mu_M}{r_M^2} = 0.00368\frac{km}{s^2}\]
+ \end{subsection}
+ 
+ \setcounter{subsection}{5}
+ \begin{subsection}{}
+ \begin{enumerate}[1)]
+  \item \[ a= \sqrt[3]{\mu_S \frac{T^2}{4\pi^2}} = 178.25 AU \]
+  \item \[ r_a = a(1+\varepsilon) \] \[ \varepsilon = \frac{r_a}{a} -1 = \frac{350 AU}{178.25 AU} -1 = 0.9635 AU\]
+  \item \[ v_\text{max} = \sqrt{\mu_S \left( \frac{2}{r_p} - \frac{1}{a} \right)} = 16.37 \frac{km}{2} \]
+  \[ v_\text{min} = \sqrt{\mu_S \left( \frac{2}{r_a} - \frac{1}{a} \right)} = 0.304 \frac{km}{2} \]
+ \end{enumerate}
+ \end{subsection}
+\end{section}
+\setcounter{section}{3}
+\begin{section}{Exercise}
+ \begin{subsection}{}
+  \begin{enumerate}[1)]
+   \item \[ \sharp\text{Orbits} = \frac{18 \text{days}}{\text{period}} = \frac{18\cdot14\cdot60}{103.267min} = 250.9998 \approx 250 ~~~[\text{round to integer}]\]
+   \item \[ T = 2\pi\sqrt{\frac{a^3}{\mu_E}} \Rightarrow a = \sqrt[3]{\frac{T^2}{4\pi^2}\mu_E} = 7291.23 km \]
+   \[ h_a = a - r_E = 7291.23 km - 6278 km = 913.23 km \]
+   \item \[ \Delta \Omega = \frac{T}{\uptau_s}2\pi = 1.233\cdot 10^{-3} \frac{\text{rad}}{rev} = 0.07068 \frac{\text{deg}}{\text{rev}}\]
+   \[ i = \arccos \left( \frac{\Delta\Omega a^2}{-3\pi J_2 r_E^2} \right) = 99.09\degree\]
+  \end{enumerate}
+ \end{subsection}
+ \setcounter{subsection}{2}
+ \begin{subsection}{}
+  vars: $T=205min, \varepsilon = 0.4,\nu = 60 \degree$
+  \[ e = \arccos \left( \frac{\varepsilon + \cos \nu}{1+\cos\nu} \right) \]
+  \[ \frac{2\pi}{T}\Delta t = e - \varepsilon\sin e \Rightarrow \Delta t = \frac{(e-\varepsilon\sin e)\cdot T}{2\pi} = 896.90s\]
+ \end{subsection}
+\end{section}
+\setcounter{section}{7}
+\begin{section}{Exercise}
+\setcounter{subsection}{1}
+ \begin{subsection}{}
+  \begin{enumerate}[1)]
+   \item frame rate: $\frac{1000ms}{40ms} = 25$ \\
+   data rate for $1$ second: \[ 25\cdot 5000 ~\text{pixel} \cdot 11 ~\text{bits} = 1357000~\text{bits}\]
+   data volume for the complete video stream
+   \[ 1357000~\text{bit} \cdot 600s = 852000000~\text{bit}s = 103125000~\text{Byte}= 103~\text{MB} ~\text{or}~ 98.3 ~\text{MiB}\]
+   \item number of frames needed to transmit $103$MB
+   \[ \frac{103125000B}{500B} = 206250 ~\text{frames}\]
+   total amount of data to transfer
+   \[ 206250~\text{frames}\cdot 512B = 105600000B \]
+   needed data rate
+   \[ \frac{105600000B\cdot 8}{60s\cdot 8} = 1760000\frac{\text{bit}}{s} = 1.76\frac{\text{Mbit}}{s} = 1.76\text{Mbps}\]
+  \end{enumerate}
+ \end{subsection}
+\end{section}
+\begin{section}{Exercise}
+ \begin{subsection}{}
+  \begin{enumerate}[1)]
+   \item mean motion $\left(\frac{\text{rev}}{\text{day}}\right) \rightarrow$ line $2$
+   \[ n = 14.59304284 \frac{\text{rev}}{\text{day}}\]
+   orbital period $T=\frac{24\cdot 60\text{min}}{n} = 98.6772\text{min}$
+   \[ a = \sqrt[3]{\frac{T^2}{4\pi^2} \mu_E} = 7073.56km \]
+   \[ r_a = a(1+\varepsilon) = 7086.60km \]
+   \[ r_p = a(1-\varepsilon) = 7060.52km \]
+   \[ h_a = r_a - R_E = 708.60km \]
+   \[ h_p = r_p - R_E = 682.52km \]
+   TLE should not be older than $30$ days $\rightarrow$ no good tracking possible
+   \item epoch $\rightarrow$ line $1$
+   \[ \underbrace{05}_{\text{year }2005}\underbrace{307}_{\text{day of year}}~\underbrace{06483461}_{\text{fraction of day (24h)}} \rightarrow \text{3. Nov 2005}\]
+   time $t= 0.06483461 \cdot 86400s = 5601.71s$
+   \[ \text{time is } \underbrace{01}_{h}:\underbrace{33}_{min}:\underbrace{21.71}_{s}\]
+   \item \begin{align*} 
+	    \Delta\Omega &= \frac{-3\pi J_2 R_E^2}{a^2(1-\varepsilon^2)^2}\cos i ~\left(\frac{\text{rad}}{\text{rev}}\right) \\
+	    &= \frac{-3\pi J_2 R_E^2}{a^2(1-\varepsilon^2)^2}\cos i \cdot n~\left(\frac{\text{rad}}{\text{day}}\right) \\
+	    &= 0.9875~\left(\frac{\text{deg}}{\text{day}}\right)
+         \end{align*}
+  if it is $\approx 1 ~\frac{\text{deg}}{\text{day}} \Rightarrow$ sun-sync orbit
+  \end{enumerate}
+
+ \end{subsection}
+
+\end{section}
+
+
 
 \end{document}
