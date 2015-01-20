@@ -73,13 +73,16 @@
  \item solar constant: $1358 \frac{W}{m^2}$ mean above atmosphere. Seasonal variation: $1310-1400 \frac{W}{m^2}$
  \item satellite must be able to recover from total power loss without assistance from ground 
 \end{itemize}
+
 \subsection{Radiation Effects}
 The following impacts on operation of electronic systems are associated with the charged particle environment:
 \begin{itemize}
  \item TID (total ionization dose): degradation of electronics which result from proton and electron degradation in semiconductor devices
- \item SEL (single event latch-up): 
- \item SEB (single event burnout): 
- \item SEU (single event upset): 
+ \item SEL (single event latch-up): SELs occur when a single event causes a high current state. They may destroy the device, or they may be recoverable with a power-reset.
+ \item SEB (single event burnout): heavy ion passes through a MOSFET (metal-oxide-semiconductor field-effect transistor). This induces a current flow which leads to device destruction 
+ if sufficient short-circuit energy is available.
+ \item SEU (single event upset): transients induced by charged particles that lose energy by ionizing the crystal lattice, leaving a wake of electron-hole pairs. The charged particles 
+ usually arise from the radiation belts or from cosmic rays
 \end{itemize}
 \[\frac{\text{EOL}}{\text{BOL}} = \text{degradation}\]
 \subsection{Efficiency and Degradation Consideration}
