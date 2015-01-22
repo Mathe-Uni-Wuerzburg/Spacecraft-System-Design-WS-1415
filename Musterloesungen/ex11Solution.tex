@@ -1,0 +1,72 @@
+\documentclass[a4paper,12pt]{article}
+%\documentclass[a4paper,10pt]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage{amssymb}
+\usepackage{marvosym}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{upgreek}
+\usepackage{geometry}
+
+\geometry{verbose,tmargin=1cm,headheight=80pt,lmargin=2cm,bmargin=4cm,rmargin=2.5cm}
+
+\title{Exercise 11 - Solution}
+\author{}
+\date{}
+
+\pdfinfo{%
+  /Title    ()
+  /Author   ()
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+\maketitle
+
+\section*{Task 11.1}
+\begin{enumerate}
+ \item \[T_{ecl} = 0.25\cdot 80min = 20min = 0.3h\]
+\[P_{ecl} = 900W\cdot 0.3h = 300Wh \]
+minimum size of battery: 
+\[C_{bat} = \frac{300Wh}{0.4\cdot 0.9} = 833.3Wh\]
+\[C_{bat}[Ah] = \frac{833.3Wh}{28V} = 29.76Ah\]
+ \item \[P_{charge} = \frac{300Wh}{0.9\cdot 28V} = 11.9Ah\]
+ \[P_{charge_{max}} = \frac{29.76Ah}{2} = 14.88Ah\]
+ \[\Rightarrow P_{charge} \leq \frac{C_{bat}}{2}\]
+ \[I_{charge} = \frac{P_{charge_{max}}}{80min - 20min} = 14.88A\]
+ \item battery cells in series: \[\text{number of cells in series} = \frac{28V}{1.2V} = 23.33 \approx 24\]
+ battery cells in parallel: \[\text{number of cells in parallel}= \frac{C_{bat}[Ah]}{C_{cell}} = \frac{29.76Ah}{2400mAh} = 12.4 \approx 13\]
+ total number of cells: number of cells in series $\times$ number of cells in parallel \[24\cdot 13 = 312\]
+ \item current of battery during eclipse (discharge)
+ \[I_{ecl} = \frac{900W}{28V} = 32.14A\]
+ limit of current of one cell (discharge)
+ \[\frac{C_{cell}}{2} = 1200mA = I_{cell}\]
+ \[\text{number of cells in parallel} = \frac{I_{ecl}}{I_{cell}} = 26.78 \approx 27\]
+ total number of cells: \[24\cdot 27 = 648\]
+\end{enumerate}
+
+\section*{Task 11.2}
+\begin{enumerate}
+ \item resolution: \qquad $640\cdot 480 = 307,200\text{pixel}$ \\ data volume for one image:  \qquad $307,200\cdot 8 \text{bit} = 2,457,600\text{bit}$\\ four pictures a day: \[2,457,600 \text{bit}\cdot 4 = 
+ 9830400 \text{bit} = 1,228,800 \text{byte  (payload memory size)}\] data volume for housekeeping \[10\cdot 8 \text{bit} + 16 \text{bit} = 96\text{bit}\] number of orbits per day 
+ \[\frac{1440min}{94min} \approx 15 \text{ orbits per day}\] duration of offline operations: \[95 min \cdot 13 + 85min\cdot 2 = 1405min\] duration of online operation: 20min \\ total number of housekeeping records: \[\frac{20min\cdot 60\frac{s}{min}}{2s} + 
+ \frac{1405min\cdot 60\frac{s}{min}}{30s} = 3410 \] total data volume for housekeepings \[3410 \cdot 96 \text{bit} = 327,360 \text{bit} = 40,920\text{byte}\] total memory size 
+ \[(1,228,800 + 40,920)\text{byte} = 1269720 \text{Byte} = 1270\text{kbyte}\]
+ \item required data rate \[\frac{\text{memory size}}{\text{contact duration}} = \frac{1269720 \text{Byte}}{20min\cdot 60 \frac{s}{min}} = 1058.1\frac{\text{byte}}{s} = 
+ 8.5\frac{\text{kbit}}{s}\]
+ \item \[A_{sa} = \frac{P_{sa}}{P_{EOL}} = 2.82m^2\]
+ \item capacity in Wh
+ \[C_r = \frac{P_e\cdot T_e}{DoD\cdot N \cdot \eta} = 203.7Wh\]
+ capacity in Ah 
+ \[C_r = \frac{203.7Wh}{27.1V} = 7.52Ah\]
+\end{enumerate}
+
+
+
+\end{document}
