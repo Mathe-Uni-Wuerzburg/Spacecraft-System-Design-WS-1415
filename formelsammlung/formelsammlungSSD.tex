@@ -14,6 +14,7 @@
 \usepackage{listings}
 \usepackage{upgreek}
 \usepackage{color}
+\usepackage{gensymb}
 
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2.5cm,headheight=80pt}
 
@@ -67,6 +68,9 @@ für Erde:
 \noindent \f{Geschwindigkeitsdinge für Ellipse}:\\
 \vspace*{3pt}
 
+average angular velocity:
+\[ \frac{2\pi}{T} \frac{\text{rad}}{\text{min}} ~~~ \frac{360\degree}{T} \frac{\text{deg}}{\text{min}}\]
+
 \noindent maximale Geschwindigkeit (Periapsis):
 \[v_{max} = \sqrt{\mu\left(\frac{2}{h_p+r} -\frac{1}{a}\right)}\]
 minimale Geschwindigkeit (Apoapsis):
@@ -83,13 +87,15 @@ right ascension of the ascending node:
 \[\Delta \Omega_{rev} = -\frac{3\pi J_2r_E^2}{a^2(1-\varepsilon^2)^2}cos(i) \cdot \frac{360^{\circ}}{2\pi}\cdot \frac{\uptau_E}{T} \text{\qquad  in} \left[\frac{\text{deg}}{\text{day}}\right]\]
 argument of perigee:
 \[\Delta \omega = \frac{3\pi J_2r_E^2}{2a^2(1-\varepsilon^2)^2}(4-5sin^2(i))\text{\qquad  in} \left[\frac{\text{rad}}{\text{rev}}\right]\]
+angular displacement after $n$ siderial days:
+\[ \Delta\Omega_n = \frac{n}{T} [\text{rev}] \cdot \Delta\Omega \left[\frac{\text{deg}}{\text{rev}}\right]\]
 \f{Subsatellitenpunkt}\\
 \vspace*{5pt}
 
 \noindent latitude of SSP: 
 \[\Theta = arcsin(sin(i)\cdot sin(\omega + \nu))\]
 longitude of SSP: 
-\[\lambda = arccos\left(\frac{cos(\omega + \nu)}{cos(\Theta)} + \Omega + \lambda_{greenwich}\right)\]
+\[\lambda = arccos\left(\frac{cos(\omega + \nu)}{cos(\Theta)}\right) + \Omega + \lambda_{greenwich}\]
 \f{Hohmann-Transfer}:\\
 \vspace*{5pt}
 
