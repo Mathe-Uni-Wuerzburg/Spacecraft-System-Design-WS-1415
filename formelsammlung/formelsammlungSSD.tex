@@ -68,10 +68,9 @@ für Erde:
 \noindent \f{Geschwindigkeitsdinge für Ellipse}:\\
 \vspace*{3pt}
 
-average angular velocity:
+\noindent average angular velocity:
 \[ \frac{2\pi}{T} \frac{\text{rad}}{\text{min}} ~~~ \frac{360\degree}{T} \frac{\text{deg}}{\text{min}}\]
-
-\noindent maximale Geschwindigkeit (Periapsis):
+maximale Geschwindigkeit (Periapsis):
 \[v_{max} = \sqrt{\mu\left(\frac{2}{h_p+r} -\frac{1}{a}\right)}\]
 minimale Geschwindigkeit (Apoapsis):
 \[v_{min} = \sqrt{\mu\left(\frac{2}{h_a+r} -\frac{1}{a}\right)}\]
@@ -96,6 +95,8 @@ angular displacement after $n$ siderial days:
 \[\Theta = arcsin(sin(i)\cdot sin(\omega + \nu))\]
 longitude of SSP: 
 \[\lambda = arccos\left(\frac{cos(\omega + \nu)}{cos(\Theta)}\right) + \Omega + \lambda_{greenwich}\]
+swath-width:
+\[ D_\text{foot} = 2\cdot \lambda_\text{max} = 2\cdot (90\degree - \arcsin\left(\frac{r_E}{r_E + h}\right)) \]
 \f{Hohmann-Transfer}:\\
 \vspace*{5pt}
 
@@ -134,6 +135,11 @@ azimuth range:
 \[\Delta \Phi = 2\cdot arccos\left(\frac{tan(\lambda_{min})}{tan(\lambda_{max})}\right)\]
 time in view:
 \[T_{view} = \frac{T}{180^{\circ}}\cdot arccos\left(\frac{cos(\lambda_{max})}{cos(\lambda_{min})}\right)\]
+time in view (Galileo Example):
+\[T_\text{view} = \frac{T}{180\degree}\cdot \lambda_\text{max}\]
+\f{street of coverage width:}
+\[ \lambda_\text{street} = \arccos\left( \frac{\cos \lambda_\text{max}}{\cos\left( \frac{\Delta\nu}{2} \right)} \right) \text{   mit   } \Delta\nu = \frac{360\degree}{\sharp\text{satellites/plane}}\]
+
 \f{Eclipsedinge}:
 \[\beta = arcsin\left(\frac{r_E}{r_E+h}\right)\]
 eclipsed fraction of a circular orbit:
@@ -141,6 +147,8 @@ eclipsed fraction of a circular orbit:
 \f{Dezibeldinge}:
 \[P[W] = 1W\cdot 10^{\frac{P[dBW]}{10}}\]
 \[P[dBW] = 10\cdot log_{10}\left(\frac{P[W]}{1W}\right)\]
+\[P[W] = \frac{1}{1000} W \cdot 10^{\frac{P[dBm]}{10}}\]
+\[P[dBm] = 10\cdot \log_{10}(1000\cdot P[W])\]
 gain:
 \[G = 10\cdot log_{10}\left(\frac{P_1}{P_2}\right)\]
 EIRP: 
